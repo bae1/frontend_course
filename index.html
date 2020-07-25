@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма выбора питомца</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+    <h1>Найди себе друга!</h1>
+
+    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="post">
+        <label>
+           Выберите домашнее животное
+           <select name="petType">
+               <option value="сat">Хочу кошечку</option>
+               <option value="dog" selected>Хочу собачку</option>
+               <option value="tiger">Хочу тигренка</option>
+           </select>
+        </label> 
+        <br />
+        <label>
+            <input type="radio" name="gender" value="boy" checked> Мальчик <br />
+            <input type="radio" name="gender" value="girl"> Девочка <br />
+            <input type="radio" name="gender" value="none" > Неважно
+        </label> 
+        <br />
+        <label>
+            Предпочитаемый цвет глаз
+            <input type="color" name="eyeColor">
+        </label>
+        <br />
+        <label>
+            Рост (см)
+            <input type="number" name="tailLength" value="10">
+        </label>
+        <br />
+        <label>
+            Введите дату рождения питомца
+            <input type="date" name="dateOfBirth">
+        </label> 
+        <br />
+        <label>
+            Как к вам обращаться?
+            <input type="text" name="name" placeholder="Введите ваше имя" min="3" maxlength="50" required value="Anna">
+        </label> <br />
+        <label>
+            Ваш номер телефона
+            <input type="tel" name="phone" placeholder="+7 9** *******" value="9798797">
+        </label>
+        <br />
+        <label>
+            Ваш Email
+            <input type="email" name="email" placeholder="name@domain.com" value="ghjg@jhkh.com">
+        </label>
+        <br />
+       <label>
+        Правила
+        <br />
+        <input type="checkbox" name="rules"  checked value="true">
+        </label> 
+        <br />
+        <input type="submit" name="submit" value="Отправить" >
+        <input type="reset" value="Сбросить">
+    </form>
+
+</main>
+</body>
+</html>
